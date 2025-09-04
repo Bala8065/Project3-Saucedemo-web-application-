@@ -1,0 +1,10 @@
+valid_users:
+  - { username: standard_user, password: secret_sauce, role: standard }
+  - { username: performance_glitch_user, password: secret_sauce, role: perf_glitch }
+  - { username: problem_user, password: secret_sauce, role: problem }
+  - { username: error_user, password: secret_sauce, role: error }
+  - { username: visual_user, password: secret_sauce, role: visual }
+invalid_users:
+  - { username: locked_out_user, password: secret_sauce, expected_error: "Sorry, this user has been locked out." }
+  - { username: '', password: '', expected_error: "Username is required" }
+  - { username: 'random', password: 'bad', expected_error: "Username and password do not match" }
